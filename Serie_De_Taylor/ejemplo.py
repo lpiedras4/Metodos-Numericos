@@ -37,3 +37,19 @@ print("\n Orden | Aproximación | Error %")
 for i, aprox in enumerate(aproximaciones):
   error = abs((real-aprox) / real) * 100
   print(f"{i} | {aprox:8f} | {error:8f}%" )
+
+  #Crear gráfica
+  x_vals = np.linspace(x0 - 0.2, x + 0.2, 300) #linspace crea un vector
+
+  #Función real
+  y_real = np.exp(-x_vals)
+
+  #Funciones de Taylor alrededor de x0
+  y_ord0 = f0 * np.ones_like(x_vals)
+  y_ord1 = f0 + f1 * (x_vals - x0)
+  y_ord2 = f0 + f1 * (x_vals - x0) + (f2 / 2) * (x_vals - x0)**2
+  y_ord3 = f0 + f1 * (x_vals - x0) + (f2 / 2) * (x_vals - x0)**2 + (f3 / 6) * (x_vals - x0)**3
+
+pit.figure(figsize=(10,6))
+pit.plot(x_vals,y_real)
+pit.show()
