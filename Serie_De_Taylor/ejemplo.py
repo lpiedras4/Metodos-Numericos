@@ -56,5 +56,17 @@ pit.plot(x_vals,y_ord0, '--',linewidth = 1.5, label = 'Orden 0')
 pit.plot(x_vals,y_ord1, '--',linewidth = 1.5, label = 'Orden 1')
 pit.plot(x_vals,y_ord2, '--',linewidth = 1.5, label = 'Orden 2')
 pit.plot(x_vals,y_ord3, '--',linewidth = 1.5, label = 'Orden 3')
-pit.legend()
+#Marcar punto de exapnsion y punto de evaluación
+pit.plot(x0,math.exp(-x0), 'ro', markersize = 8,
+         label = f'x0={x0}')
+pit.plot(x,real,'go', markersize = 8,
+         label = f'x={x}')
+pit.xlabel('x',fontsize=12)
+pit.ylabel('y',fontsize=12)
+pit.title('Series de Taylor: f(x) = e^(-x) centrada en x0 = 0.25', fontsize=16)
+pit.legend(fontsize=10,loc='best')
+pit.grid(True, alpha=0.3) # agrega cuadros a la gráfica
+pit.axvline(x=x0, color = 'red' , linestyle = ':', alpha = 0.5) #agrega lineas verticales
+pit.axvline(x=x, color = 'green' , linestyle = ':', alpha = 0.5)
+pit.tight_layout()
 pit.show()
