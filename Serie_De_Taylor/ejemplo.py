@@ -51,5 +51,10 @@ for i, aprox in enumerate(aproximaciones):
   y_ord3 = f0 + f1 * (x_vals - x0) + (f2 / 2) * (x_vals - x0)**2 + (f3 / 6) * (x_vals - x0)**3
 
 pit.figure(figsize=(10,6))
-pit.plot(x_vals,y_real)
+pit.plot(x_vals,y_real, 'k-', linewidth = 2.5, label = 'f(x) = e^(-x)')
+pit.plot(x_vals,y_ord0, '--',linewidth = 1.5, label = 'Orden 0')
+pit.plot(x_vals,y_ord1, '--',linewidth = 1.5, label = 'Orden 1')
+pit.plot(x_vals,y_ord2, '--',linewidth = 1.5, label = 'Orden 2')
+pit.plot(x_vals,y_ord3, '--',linewidth = 1.5, label = 'Orden 3')
+pit.legend()
 pit.show()
