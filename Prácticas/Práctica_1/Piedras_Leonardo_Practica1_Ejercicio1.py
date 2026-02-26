@@ -18,7 +18,7 @@ def derivada_numerica(x,h):
 val_x = 1
 val_real = derivada_analitica(val_x)
 
-h = 10e-1 #Inicializamos h en 10e-1
+h = 10**-1 #Inicializamos h en 10**-1
 pasos_h = []
 while h>=1e-18: #Creamos un ciclo que guarde los pasos de h divididos entre 10 hasta 1e-18
     h/=10
