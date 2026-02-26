@@ -15,3 +15,9 @@ media_sensorC=np.mean(sensor_C)
 print(f"{media_sensorA}")
 print(f"{media_sensorB}")
 print(f"{media_sensorC}")
+
+desv_est_sensorA = np.std(sensor_A)
+desv_est_sensorB = np.std(sensor_B)
+desv_est_sensorC = np.std(sensor_C)
+
+#Guardar arrays sensores en una colección, iterar sobre ella y obtener medias y desvuiaciones estandar para imprimir en consola
