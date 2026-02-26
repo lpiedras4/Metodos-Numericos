@@ -1,6 +1,6 @@
 import math
 import numpy as np
-import matplotlib as plt
+
 
 #Clasificar sensores como exacto/inexacto y preciso/impreciso y que miden una temperatura constante real de 100.0 grados C. Toman 5 lecturas cada uno.
 #Exacto / inexacto (basado en la media vs valor real)
@@ -21,6 +21,7 @@ sensores = {"Sensor A":sensor_A, "Sensor B":sensor_B,"Sensor C":sensor_C}
 
 print("Medición de exactitud de los sensores con base en la media de temperatura")
 for sensor,temps in sensores.items():
+ # sesgo = mediaSensor(sensor) - 100
   if mediaSensor(temps)!=tempConst:
     print(f"El {sensor} es inexacto: {mediaSensor(temps)}")
   elif mediaSensor(temps)==tempConst:
