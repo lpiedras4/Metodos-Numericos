@@ -49,7 +49,7 @@ pit.plot(x_vals,y_ord0, '--',linewidth = 1.5, label = 'Orden 0')
 pit.plot(x_vals,y_ord1, '--',linewidth = 1.5, label = 'Orden 1')
 pit.plot(x_vals,y_ord2, '--',linewidth = 1.5, label = 'Orden 2')
 
-#Marcar punto de exapnsion y punto de evaluación
+#Marcar punto de expansion y punto de evaluación
 pit.plot(x0,math.log(x0), 'ro', markersize = 8,
          label = f'x0={x0}')
 pit.plot(x,real,'go', markersize = 8,
