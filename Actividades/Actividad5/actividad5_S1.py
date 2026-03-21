@@ -1,15 +1,13 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-Created on Mon Mar 16 14:37:57 2026
-
-@author: remisw
-"""
+import math
 
 def secante(f, x0, x1, epsilon, N_max):
     # Inicialización
     f0 = f(x0)
     f1 = f(x1)
+    #Impresión de cabecera de la tabla
+    print("Iteración | x0          | x1           | f(xn)          | error aproximado          ")
+    print("-" * 70)
+    
     
     # Control básico: evitar el caso trivial de misma evaluación
     if f0 == f1:
@@ -41,8 +39,11 @@ def secante(f, x0, x1, epsilon, N_max):
         else:
             error = 0.0
 
-        #
+        #Impresión de fila
+        print
         
+        #Impresión de la fila
+        print(f"{iteracion:<9} | {x0:<12.6f} | {x1:<12.6f} | {fr:<12.6f} | {error:<12.6f} ")
         # Verificación de paro
         if error < epsilon:
             return xr, iteracion, error
@@ -57,11 +58,11 @@ def secante(f, x0, x1, epsilon, N_max):
 
 # --- CASO DE ESTUDIO ---
 # Ejemplo: el primero que vimos en clase con bisección
-funcion = lambda x: x**3 - x - 1
+funcion = lambda x: math.cos(x)-x
 
 # Parámetros
 x_inicial_0 = 0.0
-x_inicial_1 = 2.0
+x_inicial_1 = 1.0
 tolerancia_error = 0.001  # Error relativo porcentual
 iteraciones_maximas = 50
 

@@ -12,6 +12,10 @@ def falsa_posicion(f, a, b, epsilon,N_max):
     xr_old = a
     error = 100.0
     
+    # Imprimir encabezado de la tabla
+    print("Iteración | a          | b          | xr         | fr         | Error")
+    print("-" * 70)  
+    
     #Ciclo
     while iteracion < N_max:
         iteracion+=1
@@ -28,11 +32,16 @@ def falsa_posicion(f, a, b, epsilon,N_max):
             a = xr
             fa = fr
         else:
-            #fa * fr = 0 significa que encontramos la ríz exacta
+            #fa * fr = 0 significa que encontramos la raíz exacta
             return xr,iteracion,0.0
         
         #Cálculo del error aproximado
         error = (abs((xr - xr_old) / xr)) *100
+        
+        #Impresión de fila
+        print(f"{iteracion:<9} | {a:<12.6f} | {b:<12.6f} | {xr:<12.6f} | {fr:<12.6f} | {error:<12.6f}")
+        
+        
         #Verificación de paro
         if error < epsilon:
             return xr, iteracion,error
@@ -46,13 +55,9 @@ def falsa_posicion(f, a, b, epsilon,N_max):
     return xr, iteracion, error
 
 
-#Definimos la función f(x) = x^3 - x - 1
+#Definimos la función f(x) = cos(x) - x
 
 funcion = lambda x: math.cos(x) - x
-#def funcion (x):
-#   resultado = e^-x -x
-#    return resultado
-
 #Parámetros
 a = 0.0
 b = 1.0
