@@ -40,6 +40,9 @@ def secante(f, x0, x1, epsilon, N_max):
             error = abs((xr - xr_old) / xr) * 100.0
         else:
             error = 0.0
+
+        #Impresión de fila
+        print
         
         # Verificación de paro
         if error < epsilon:
@@ -58,7 +61,7 @@ def secante(f, x0, x1, epsilon, N_max):
 funcion = lambda x: x**3 - x - 1
 
 # Parámetros
-x_inicial_0 = 1.0
+x_inicial_0 = 0.0
 x_inicial_1 = 2.0
 tolerancia_error = 0.001  # Error relativo porcentual
 iteraciones_maximas = 50
