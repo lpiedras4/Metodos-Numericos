@@ -58,11 +58,11 @@ def secante(f, x0, x1, epsilon, N_max):
 
 # --- CASO DE ESTUDIO ---
 # Ejemplo: el primero que vimos en clase con bisección
-funcion = lambda x: math.cos(x)-x
+funcion = lambda x: math.log(x)-1
 
 # Parámetros
-x_inicial_0 = 0.0
-x_inicial_1 = 1.0
+x_inicial_0 = 2.0
+x_inicial_1 = 3.0
 tolerancia_error = 0.001  # Error relativo porcentual
 iteraciones_maximas = 50
 
