@@ -36,11 +36,11 @@ def newton_raphson(f,df,p0,epsilon, N_max):
   return xr, iteracion, error
 
 #----Ejemplo -----#
-funcion = lambda x: x**3 - x -1
-derivada = lambda x: 3*x**2 -1
+funcion = lambda x: x**4 - 6*x**3 + 12*x**2 - 10*x + 3
+derivada = lambda x:4*x**3 - 18*x**2 + 24*x - 10
 
 #Parámetros
-p_inicial = 1
+p_inicial = 0.5
 tolerancia_error = 0.001
 iteraciones_maximas = 50
 
