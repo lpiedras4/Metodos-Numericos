@@ -76,13 +76,12 @@ def eliminacion_gauss_pivoteo_pasos(A,b):
 # matriz_A = np.array
 
 matriz_A = np.array([
-  [5, 2 , 0],
-  [2, 1, -1],
-  [2, 3, -1]
+  [4,10],
+  [10, 30]
 
 ])    
 
-vector_b = np.array([2, 0, 3])
+vector_b = np.array([16,47])
 
 solucion = eliminacion_gauss_pivoteo_pasos(matriz_A, vector_b)
 
